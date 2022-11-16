@@ -8,6 +8,7 @@ public class questao3 {
 		
 		int valores[][] = new int [5][5];
 		int valorPesquisa = 0;
+		boolean verificador = false;
 		
 		Scanner teclado = new Scanner (System.in);
 		
@@ -21,7 +22,7 @@ public class questao3 {
 			}
 		}
 		
-		System.out.println("Por qual valor voc� procura?");
+		System.out.println("\n\nPor qual valor você procura?");
 		valorPesquisa = teclado.nextInt();
 		
 		for (int c = 0; c < 5; c++) {
@@ -31,10 +32,15 @@ public class questao3 {
 				if (valores [l][c] == valorPesquisa) {
 					
 					System.out.println("O valor pode ser encontrado na linha: " + l + " coluna: " + c);
+					verificador = true;
 				}
 			}
 		}
-		
+		if (verificador == false){
+			
+			System.out.print("\nValor não encontrado");
+				
+		}
 	}
 
 }
